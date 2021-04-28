@@ -27,8 +27,8 @@ const StaffMenu = () => {
           <Route path="/module" component={Module} />
           <Route path="/gradebook" component={Gradebook} />
           <Route path="/calendar" component={Calendar}/>
-          <Route path="/https://sharp-swanson-03f611.netlify.app/reading-page" component={ReadingPages} />
-          <Route path="/class-table" component={ClassPage} />
+          <Route path="/reading-page" component={ReadingPages} />
+          <Route path="/class-page" component={ClassPage} />
           <Route path="/lesson-history" component={LessonHistory} />
           {/* <Route path="/register-user" component={RegisterUser} /> */}
           <Route path="/profile-table" component={ProfileTable} />

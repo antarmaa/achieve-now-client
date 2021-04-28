@@ -64,7 +64,7 @@ export const ClassPage = () => {
       }).then(
         (result) => {
           console.log("data sent successfully");
-          window.location.reload(true);
+          // window.location.reload(true);
         },
         (error) => {
           console.log("bro we got an error " + error);
