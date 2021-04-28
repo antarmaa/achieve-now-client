@@ -14,7 +14,7 @@ export const ClassPage = () => {
 
   /*Fetch  sites and tables already stored in the database*/
   React.useEffect(() => {
-    fetch("http://localhost:5000/getClassData", {
+    fetch("https://achieve-now.herokuapp.com/getClassData", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -54,7 +54,7 @@ export const ClassPage = () => {
         siteName: newSiteName,
       };
 
-      fetch("http://localhost:5000/createClassSite", {
+      fetch("https://achieve-now.herokuapp.com/createClassSite", {
         method: "POST",
         headers: {
           Accept: "application/json",

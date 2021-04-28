@@ -17,7 +17,7 @@ export const SignUp = () => {
   const [setAuthorizedUsers] = React.useState([]);
   React.useEffect(() => {
     getStudentCount();
-    fetch("http://localhost:5000/getRegisteredUsers", {
+    fetch("https://achieve-now.herokuapp.com/getRegisteredUsers", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -36,7 +36,7 @@ export const SignUp = () => {
   });
 
   const getStudentCount = async () => {
-    await fetch("http://localhost:5000/getBookFromGradebook", {
+    await fetch("https://achieve-now.herokuapp.com/getBookFromGradebook", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -58,7 +58,7 @@ export const SignUp = () => {
     const childData = { ...signUpData };
     delete childData.password;
     childData.id = childId;
-    fetch("http://localhost:5000/addChildToParent", {
+    fetch("https://achieve-now.herokuapp.com/addChildToParent", {
       method: "POST",
       headers: {
         Accept: "application/json",

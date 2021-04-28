@@ -14,7 +14,7 @@ export const Table: React.FC<TableProps> = ({ data }) => {
   };
 
   const addLessonToDB = () => {
-    fetch("http://localhost:5000/addLesson", {
+    fetch("https://achieve-now.herokuapp.com/addLesson", {
       method: "POST",
       headers: {
         Accept: "application/json",

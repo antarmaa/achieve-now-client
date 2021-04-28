@@ -9,7 +9,7 @@ export const Module = () => {
   const [lessons, setLessons] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/getLessons", {
+    fetch("https://achieve-now.herokuapp.com/getLessons", {
       method: "GET",
       headers: {
         Accept: "application/json",

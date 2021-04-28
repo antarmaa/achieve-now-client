@@ -46,7 +46,7 @@ export const Gradebook: React.FC = () => {
       .filter((data: any) => data);
     setTableData(newTableData);
 
-    fetch("http://localhost:5000/updateStudentsGrades", {
+    fetch("https://achieve-now.herokuapp.com/updateStudentsGrades", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -96,7 +96,7 @@ export const Gradebook: React.FC = () => {
     setTableData(data);
   };
   React.useEffect(() => {
-    fetch("http://localhost:5000/getBookFromGradebook", {
+    fetch("https://achieve-now.herokuapp.com/getBookFromGradebook", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -219,7 +219,7 @@ export const Gradebook: React.FC = () => {
   const saveGrades = () => {
     let newData: any[] = [];
     tableData.forEach((data) => newData.push(data));
-    fetch("http://localhost:5000/updateStudentsGrades", {
+    fetch("https://achieve-now.herokuapp.com/updateStudentsGrades", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -45,7 +45,7 @@ export const ReadingTable: React.FC<props> = ({ tableData, siteName}) => {
     }).filter((data:any)=>data);
     setReadingTableData(newClassTableData)
 
-    fetch("http://localhost:5000/removeStudentInReading", {
+    fetch("https://achieve-now.herokuapp.com/removeStudentInReading", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -65,7 +65,7 @@ export const ReadingTable: React.FC<props> = ({ tableData, siteName}) => {
 
 
   const saveEditedStudent = () => {
-    fetch("http://localhost:5000/updateStudentsInReadingSite", {
+    fetch("https://achieve-now.herokuapp.com/updateStudentsInReadingSite", {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -109,7 +109,7 @@ export const ReadingTable: React.FC<props> = ({ tableData, siteName}) => {
     setEditTable(true);
     console.log(le);
 
-    fetch("http://localhost:5000/addStudentToReadingSite", {
+    fetch("https://achieve-now.herokuapp.com/addStudentToReadingSite", {
       method: "POST",
       headers: {
         Accept: "application/json",

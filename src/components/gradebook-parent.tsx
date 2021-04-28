@@ -27,7 +27,7 @@ export const GradebookParent: React.FC = () => {
 
   
   React.useEffect(() => {
-    fetch("http://localhost:5000/getBookFromGradebook", {
+    fetch("https://achieve-now.herokuapp.com/getBookFromGradebook", {
       method: "GET",
       headers: {
         Accept: "application/json",

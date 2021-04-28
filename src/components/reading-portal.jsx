@@ -15,7 +15,7 @@ export const ReadingPages = () => {
   const [selectedSiteName, setSelectedSiteName] = React.useState("");
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/getReadingData", {
+    fetch("https://achieve-now.herokuapp.com/getReadingData", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -50,7 +50,7 @@ export const ReadingPages = () => {
         id: readingData?.length ? Math.max.apply(null, a) + 1 : 1,
         siteName: newSiteName,
       };
-      fetch("http://localhost:5000/createReadingSite", {
+      fetch("https://achieve-now.herokuapp.com/createReadingSite", {
         method: "POST",
         headers: {
           Accept: "application/json",

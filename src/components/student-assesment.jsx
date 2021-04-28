@@ -15,7 +15,7 @@ export const StudentAssesment = () => {
     const [searchTerm, setSearchTerm] = React.useState("")
     const [searchResults,setSearchResuls] = React.useState([])
     React.useEffect(() => {
-        fetch("http://localhost:5000/getData", {
+        fetch("https://achieve-now.herokuapp.com/getData", {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -56,7 +56,7 @@ export const StudentAssesment = () => {
                 <input type= "text" onChange = {getStudentList}></input>
                 <AssessmentTable data={searchResults}></AssessmentTable>
                 <button onClick={()=>setShowForm(true)}>Add assessment</button>
-                {showForm && ( <form action="http://localhost:5000/sendData" method="POST">
+                {showForm && ( <form action="https://achieve-now.herokuapp.com/sendData" method="POST">
                     <input placeholder = "first name" name = "student_first" type="text"/>
                     <input placeholder = "last name" name = "student_last" type="text"/>
                     <input placeholder = "teacher" name = "teacher" type="text"/>

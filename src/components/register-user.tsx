@@ -7,7 +7,7 @@ export const RegisterUser: React.FC = () => {
   const tableColumns = ["Authorized Emails"];
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/getRegisteredUsers", {
+    fetch("https://achieve-now.herokuapp.com/getRegisteredUsers", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -30,7 +30,7 @@ export const RegisterUser: React.FC = () => {
   };
 
   const registerUser = () => {
-    fetch("http://localhost:5000/registerUser", {
+    fetch("https://achieve-now.herokuapp.com/registerUser", {
       method: "POST",
       headers: {
         Accept: "application/json",

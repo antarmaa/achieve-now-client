@@ -75,7 +75,7 @@ export const ProfileTable: React.FC = () => {
   console.log(childId)
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/getProfile", {
+    fetch("https://achieve-now.herokuapp.com/getProfile", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -123,7 +123,7 @@ export const ProfileTable: React.FC = () => {
     setUploadedFile([]);
 
     setUploadedFile(newTableData);
-    fetch("http://localhost:5000/insertIntoProfile", {
+    fetch("https://achieve-now.herokuapp.com/insertIntoProfile", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -200,7 +200,7 @@ export const ProfileTable: React.FC = () => {
   };
 
   const sendEmails = (data: any) => {
-    fetch("http://localhost:5000/sendEmails", {
+    fetch("https://achieve-now.herokuapp.com/sendEmails", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -217,7 +217,7 @@ export const ProfileTable: React.FC = () => {
     );
   };
   const getStudentCount = async () => {
-    await fetch("http://localhost:5000/getBookFromGradebook", {
+    await fetch("https://achieve-now.herokuapp.com/getBookFromGradebook", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -267,7 +267,7 @@ export const ProfileTable: React.FC = () => {
   };
 
   const saveUploadedData = (fileData: any) => {
-    fetch("http://localhost:5000/insertIntoProfile", {
+    fetch("https://achieve-now.herokuapp.com/insertIntoProfile", {
       method: "POST",
       headers: {
         Accept: "application/json",

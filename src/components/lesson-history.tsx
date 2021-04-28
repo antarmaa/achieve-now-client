@@ -16,7 +16,7 @@ export const LessonHistory: React.FC<props> = ({ studentId,setLessonHistory }) =
 
 
   React.useEffect(() => {
-    fetch("http://localhost:5000/getLessonHistory", {
+    fetch("https://achieve-now.herokuapp.com/getLessonHistory", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -66,7 +66,7 @@ export const LessonHistory: React.FC<props> = ({ studentId,setLessonHistory }) =
   };
 
   const onSave = () => {
-    fetch("http://localhost:5000/addLessonHistoryToStudent", {
+    fetch("https://achieve-now.herokuapp.com/addLessonHistoryToStudent", {
       method: "POST",
       headers: {
         Accept: "application/json",
