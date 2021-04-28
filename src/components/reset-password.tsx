@@ -2,6 +2,9 @@ import React from "react";
 import { auth } from "../firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+/**
+* This file gives users the avility to reset their passwords 
+*/
 
 export const ResetPassword: React.FC = () => {
   const [email, setEmail] = React.useState("");
