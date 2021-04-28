@@ -173,7 +173,7 @@ export const Gradebook: React.FC = () => {
           console.log("bro we got an error" + error);
         }
       );
-  });
+  },[]);
 //function to add columns(certs)
   const addColumn = (id: string) => {
     const count = headerColumns.length;
