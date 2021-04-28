@@ -64,7 +64,7 @@ class SideNav extends React.Component {
           key: 5,
         },
         {
-          path: "/",
+          path: "/class-page",
           name: "class_page",
           css: "fas fa-book",
           title: "Class Page",

@@ -88,7 +88,7 @@ export const ClassPage = () => {
               <div className="p-2">
                 <h2 className="addSiteText">Add a Class</h2>
               </div>
-              <div class="d-flex justify-content-center">
+              <div className="d-flex justify-content-center">
                 <input type="text" onChange={onChange} />
               </div>
               <div className="d-flex justify-content-center">
@@ -110,8 +110,10 @@ export const ClassPage = () => {
                   Class Names
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  {classData?.map((reading) => {
+                  {classData?.map((reading,index) => {
                     return (
+                      <React.Fragment key={index}>
+
                       <Dropdown.Item
                         onClick={(event) =>
                           getTableDataBySiteName(event.target.textContent)
@@ -119,6 +121,8 @@ export const ClassPage = () => {
                       >
                         {reading?.siteName}
                       </Dropdown.Item>
+
+                      </React.Fragment>
                     );
                   })}
                 </Dropdown.Menu>
