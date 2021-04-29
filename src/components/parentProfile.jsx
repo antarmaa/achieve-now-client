@@ -24,7 +24,7 @@ export const ParentProfile = () => {
 
   return (
     <>
-      <button class="logout-button" onClick={signOut}>
+      <button className="logout-button" onClick={signOut}>
         logout
       </button>
       <div>

@@ -90,7 +90,7 @@ export const GradebookParent: React.FC = () => {
           console.log("bro we got an error" + error);
         }
       );
-  });
+  },[]);
 
 
 

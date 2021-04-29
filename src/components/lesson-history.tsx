@@ -35,7 +35,7 @@ export const LessonHistory: React.FC<props> = ({ studentId,setLessonHistory }) =
           console.log("bro we got an error " + error);
         }
       );
-  });
+  },[]);
 
   const addLessonNote = () => {
     const date = new Date();
@@ -94,6 +94,7 @@ export const LessonHistory: React.FC<props> = ({ studentId,setLessonHistory }) =
         <table className="table">
           <thead>
             {tableColumns?.map((header, index) => {
+              
               return <th scope="col">{header}</th>;
             })}
           </thead>

@@ -61,7 +61,7 @@ export const Table: React.FC<TableProps> = ({ data }) => {
                   <tr>
                     <td>
                       <a
-                        href={"https://" + row[`lesson-${index + 1}`]}
+                        href={" " + row[`lesson-${index + 1}`]}
                         target="_blank"
                         rel="noopener noreferrer" 
                       >

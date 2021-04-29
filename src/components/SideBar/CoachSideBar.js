@@ -70,7 +70,7 @@ class SideNav extends React.Component {
 
           {items.map((item) => {
             return (
-              <>
+              <div key={item.key}>
                 <NavItem
                   path={item.path}
                   name={item.name}
@@ -80,7 +80,7 @@ class SideNav extends React.Component {
                   active={item.path === activePath}
                   key={item.key}
                 />
-              </>
+            </div>
             );
           })}
         </StyledSideNav>

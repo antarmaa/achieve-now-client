@@ -83,7 +83,7 @@ export const ReadingPages = () => {
             <div className="p-2">
               <h2 className="addSiteText">Add a Site</h2>
             </div>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <input type="text" onChange={onChange} />
             </div>
             <div className="d-flex justify-content-center">
@@ -106,8 +106,9 @@ export const ReadingPages = () => {
                   Site Names
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  {readingData?.map((reading) => {
+                  {readingData?.map((reading,index) => {
                     return (
+                      <React.Fragment key={index}>
                       <Dropdown.Item
                         onClick={(event) =>
                           getTableDataBySiteName(event.target.textContent)
@@ -115,6 +116,7 @@ export const ReadingPages = () => {
                       >
                         {reading?.siteName}
                       </Dropdown.Item>
+                      </React.Fragment>
                     );
                   })}
                 </Dropdown.Menu>
