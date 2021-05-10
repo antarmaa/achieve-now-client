@@ -14,7 +14,7 @@ export const GradebookParent: React.FC = () => {
   const [modulesArr, setModulesArr] = React.useState<any[]>([]);
   const [headerColumns, setHeaderColumns] = React.useState<string[]>([
     "",
-    "id",
+    "Seat",
     "First",
     "Last",
     "Parent Email"
@@ -116,7 +116,7 @@ export const GradebookParent: React.FC = () => {
                 <th scope="row">
   
                   <span
-                    className="btn btn-outline-success btn-sm"
+                    // className="btn btn-outline-success btn-sm"
                     onClick={() => {
                       setShowProgressBar(true);
                       setGradeArr({
@@ -125,7 +125,7 @@ export const GradebookParent: React.FC = () => {
                       });
                     }}
                   >
-                    <i className="fas fa-tasks" />
+                    {/* <i className="fas fa-tasks" /> */}
                   </span>
       
                 </th>
